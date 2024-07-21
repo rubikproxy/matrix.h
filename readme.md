@@ -1,5 +1,3 @@
-### `README.md`
-
 ```markdown
 # Matrix Library
 
@@ -177,7 +175,7 @@ Here’s an example demonstrating how to use the library:
    - **Linux/macOS**:
 
      ```sh
-     gcc main.c -o main -lmatrix
+     gcc main.c -L/usr/local/lib -lmatrix -o main -lm
      ```
 
    - **Windows**:
@@ -264,10 +262,8 @@ Computes the eigenvalues of a square matrix. The real and imaginary parts are st
 This library is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 ```
 
-### Notes
-- **Script Execution**: The `install_matrix_lib.sh` script should be used on Linux to automate the installation process.
-- **Manual Installation**: On macOS and Windows, the installation involves manually copying files and setting environment  variables where applicable.
-- **Placeholder Functions**: Eigenvalue computation is a placeholder; additional implementation is required for practical use.
+### Changes Made
+1. **Added Compilation Command**: Included the `gcc` command with `-L/usr/local/lib` and `-lmatrix` for Linux/macOS compilation.
+2. **Updated Instructions**: Provided instructions for compiling and running the example code.
 
-
-Adjust the paths and instructions based on your specific environment and setup.
+Feel free to adjust any details based on your specific setup or requirements!
