@@ -5,6 +5,7 @@ AR = ar
 ARFLAGS = rcs
 LIBRARY = libmatrix.a
 OBJECTS = src/matrix.o
+LIBS = -lm
 
 # Default target
 all: $(LIBRARY)
