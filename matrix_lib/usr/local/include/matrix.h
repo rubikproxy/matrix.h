@@ -17,11 +17,9 @@ Matrix *matrix_add(const Matrix *a, const Matrix *b);
 Matrix *matrix_sub(const Matrix *a, const Matrix *b);
 Matrix *matrix_mul(const Matrix *a, const Matrix *b);
 Matrix *matrix_transpose(const Matrix *matrix);
-Matrix *matrix_inverse(const Matrix *matrix);
 double matrix_determinant(const Matrix *matrix);
 
 // Advanced operations
-Matrix *matrix_multiply(const Matrix *a, const Matrix *b);
 Matrix *matrix_identity(size_t size);
 double matrix_norm(const Matrix *matrix);
 void matrix_eigenvalues(const Matrix *matrix, double *real, double *imag);

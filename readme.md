@@ -245,10 +245,6 @@ Multiplies two matrices. The number of columns in matrix `a` must equal the numb
 
 Transposes the matrix.
 
-### `Matrix *matrix_inverse(const Matrix *matrix)`
-
-Calculates the inverse of a square matrix. Returns `NULL` if the matrix is not invertible.
-
 ### `double matrix_determinant(const Matrix *matrix)`
 
 Calculates the determinant of a square matrix.
