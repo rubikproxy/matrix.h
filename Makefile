@@ -31,6 +31,6 @@ uninstall:
 
 # Clean object files and library
 clean:
-	rm -f $(OBJECTS) $(LIBRARY)
+	rm -f src/matrix.o $(LIBRARY)
 
 .PHONY: all install uninstall clean
