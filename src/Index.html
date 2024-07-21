@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Library</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #121212;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        h1, h2, h3 {
+            color: #bb86fc;
+            margin-top: 20px;
+        }
+        h1 {
+            border-bottom: 3px solid #bb86fc;
+            padding-bottom: 10px;
+        }
+        p {
+            line-height: 1.8;
+        }
+        pre {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #e0e0e0;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #333333;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #e0e0e0;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #bb86fc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .code-container {
+            margin-bottom: 20px;
+        }
+        .code-container pre {
+            background-color: #1e1e1e;
+        }
+        .contribute-section, .sponsor-section {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .contribute-section h2, .sponsor-section h2 {
+            color: #bb86fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Matrix Library</h1>
+        <p><code>matrix.h</code> is a C library for advanced matrix calculations. It provides various functions to perform operations such as matrix addition, subtraction, multiplication, transposition, inversion, and more. This library is suitable for numerical computing and scientific applications.</p>
+        
+        <h2>Features</h2>
+        <ul>
+            <li>Matrix Creation and Deallocation</li>
+            <li>Basic Operations: Addition, Subtraction, Multiplication</li>
+            <li>Advanced Operations: Transposition, Inversion, Determinant Calculation</li>
+            <li>Matrix Norm Calculation</li>
+            <li>Eigenvalue Computation (Placeholder)</li>
+            <li>Identity Matrix Creation</li>
+        </ul>
+        
+        <h2>Installation</h2>
+        <h3>Linux</h3>
+        <ol>
+            <li><strong>Clone the Repository</strong>
+                <div class="code-container"><pre><code>git clone https://github.com/rubikproxy/matrix.h
+cd matrix.h</code></pre></div>
+            </li>
+            <li><strong>Build and Install the Library</strong>
+                <div class="code-container"><pre><code>chmod +x install_matrix_lib.sh
+./install_matrix_lib.sh</code></pre></div>
+                <p>This script will:</p>
+                <ul>
+                    <li>Clean up previous builds</li>
+                    <li>Compile the source code</li>
+                    <li>Create a static library</li>
+                    <li>Install the library and header files</li>
+                    <li>Update the library cache</li>
+                </ul>
+            </li>
+            <li><strong>Verify the Installation</strong>
+                <div class="code-container"><pre><code>ls /usr/local/lib/libmatrix.a
+ls /usr/local/include/matrix.h</code></pre></div>
+            </li>
+        </ol>
+
+        <h3>macOS</h3>
+        <ol>
+            <li><strong>Clone the Repository</strong>
+                <div class="code-container"><pre><code>git clone https://github.com/rubikproxy/matrix.h
+cd matrix.h</code></pre></div>
+            </li>
+            <li><strong>Build the Library</strong>
+                <div class="code-container"><pre><code>make</code></pre></div>
+            </li>
+            <li><strong>Install the Library</strong>
+                <div class="code-container"><pre><code>sudo cp libmatrix.a /usr/local/lib/
+sudo cp include/matrix.h /usr/local/include/
+sudo ranlib /usr/local/lib/libmatrix.a</code></pre></div>
+            </li>
+            <li><strong>Verify the Installation</strong>
+                <div class="code-container"><pre><code>ls /usr/local/lib/libmatrix.a
+ls /usr/local/include/matrix.h</code></pre></div>
+            </li>
+        </ol>
+
+        <h3>Windows</h3>
+        <ol>
+            <li><strong>Clone the Repository</strong>
+                <div class="code-container"><pre><code>git clone https://github.com/rubikproxy/matrix.h
+cd matrix.h</code></pre></div>
+            </li>
+            <li><strong>Build the Library</strong>
+                <div class="code-container"><pre><code>gcc -Iinclude -Wall -Wextra -c src/matrix.c -o src/matrix.o
+ar rcs libmatrix.a src/matrix.o</code></pre></div>
+            </li>
+            <li><strong>Install the Library</strong>
+                <div class="code-container"><pre><code>mkdir "C:\Program Files\MatrixLib"
+copy libmatrix.a "C:\Program Files\MatrixLib"
+copy include\matrix.h "C:\Program Files\MatrixLib"</code></pre></div>
+            </li>
+            <li><strong>Set Environment Variables</strong>
+                <div class="code-container"><pre><code>setx LIBRARY_PATH "C:\Program Files\MatrixLib"</code></pre></div>
+            </li>
+            <li><strong>Verify the Installation</strong>
+                <div class="code-container"><pre><code>dir "C:\Program Files\MatrixLib"</code></pre></div>
+            </li>
+        </ol>
+
+        <h2>Usage</h2>
+        <h3>Example Code</h3>
+        <p>Here’s an example demonstrating how to use the library:</p>
+        <ol>
+            <li><strong>Create a Source File</strong>
+                <div class="code-container"><pre><code>#include <stdio.h>
+#include <matrix.h>
+
+int main() {
+    // Create matrices
+    Matrix *a = create_matrix(2, 2);
+    Matrix *b = create_matrix(2, 2);
+
+    // Initialize matrices
+    a->data[0] = 1; a->data[1] = 2;
+    a->data[2] = 3; a->data[3] = 4;
+
+    b->data[0] = 5; b->data[1] = 6;
+    b->data[2] = 7; b->data[3] = 8;
+
+    // Matrix addition
+    Matrix *result_add = matrix_add(a, b);
+    printf("Matrix Addition:\\n");
+    print_matrix(result_add);
+
+    // Matrix multiplication
+    Matrix *result_mul = matrix_mul(a, b);
+    printf("Matrix Multiplication:\\n");
+    print_matrix(result_mul);
+
+    // Clean up
+    free_matrix(a);
+    free_matrix(b);
+    free_matrix(result_add);
+    free_matrix(result_mul);
+
+    return 0;
+}</code></pre></div>
+            </li>
+            <li><strong>Compile the Example</strong>
+                <ul>
+                    <li><strong>Linux/macOS</strong>:
+                        <div class="code-container"><pre><code>gcc main.c -L/usr/local/lib -lmatrix -o main -lm</code></pre></div>
+                    </li>
+                    <li><strong>Windows</strong>:
+                        <div class="code-container"><pre><code>gcc main.c -o main -L"C:\Program Files\MatrixLib" -lmatrix</code></pre></div>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Run the Example</strong>
+                <ul>
+                    <li><strong>Linux/macOS</strong>:
+                        <div class="code-container"><pre><code>./main</code></pre></div>
+                    </li>
+                    <li><strong>Windows</strong>:
+                        <div class="code-container"><pre><code>main.exe</code></pre></div>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+        <h2>Contributing</h2>
+        <div class="contribute-section">
+            <h3>How to Contribute</h3>
+            <p>We welcome contributions to the Matrix Library project. Here are some ways you can contribute:</p>
+            <ul>
+                <li>Report bugs and issues</li>
+                <li>Submit feature requests</li>
+                <li>Review and update documentation</li>
+                <li>Submit pull requests for bug fixes and new features</li>
+            </ul>
+            <p>For detailed guidelines on how to contribute, please refer to our <a href="https://github.com/rubikproxy/matrix.h/blob/main/CONTRIBUTING.md">Contribution Guidelines</a>.</p>
+        </div>
+
+        <h2>Support Us</h2>
+        <div class="sponsor-section">
+            <h3>Become a Sponsor</h3>
+            <p>If you find this library useful and would like to support its development, consider sponsoring us on <a href="https://github.com/sponsors/rubikproxy">GitHub Sponsors</a>. Your support helps us maintain and improve the library.</p>
+        </div>
+    </div>
+</body>
+                          </html>
+                          
