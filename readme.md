@@ -1,5 +1,3 @@
-Here's the updated documentation for installing the Matrix library across different operating systems, including Linux, Windows, and macOS. It covers the `install_matrix_lib.sh` script as well as installation instructions for all three OS platforms.
-
 ### `README.md`
 
 ```markdown
