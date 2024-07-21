@@ -28,3 +28,4 @@ void matrix_eigenvalues(const Matrix *matrix, double *real, double *imag);
 const char *matrix_error_message(void);
 
 #endif // MATRIX_H
+
