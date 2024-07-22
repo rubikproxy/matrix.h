@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrix Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -72,99 +73,102 @@
             margin-top: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .contribute-section h2, .sponsor-section h2 {
+        .contribute-section h3, .sponsor-section h3 {
             color: #bb86fc;
+        }
+        .icon {
+            margin-right: 8px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Matrix Library</h1>
+        <h1><i class="fas fa-calculator icon"></i>Matrix Library</h1>
         <p><code>matrix.h</code> is a C library for advanced matrix calculations. It provides various functions to perform operations such as matrix addition, subtraction, multiplication, transposition, inversion, and more. This library is suitable for numerical computing and scientific applications.</p>
         
-        <h2>Features</h2>
+        <h2><i class="fas fa-list icon"></i>Features</h2>
         <ul>
-            <li>Matrix Creation and Deallocation</li>
-            <li>Basic Operations: Addition, Subtraction, Multiplication</li>
-            <li>Advanced Operations: Transposition, Inversion, Determinant Calculation</li>
-            <li>Matrix Norm Calculation</li>
-            <li>Eigenvalue Computation (Placeholder)</li>
-            <li>Identity Matrix Creation</li>
+            <li><i class="fas fa-check-circle icon"></i>Matrix Creation and Deallocation</li>
+            <li><i class="fas fa-check-circle icon"></i>Basic Operations: Addition, Subtraction, Multiplication</li>
+            <li><i class="fas fa-check-circle icon"></i>Advanced Operations: Transposition, Inversion, Determinant Calculation</li>
+            <li><i class="fas fa-check-circle icon"></i>Matrix Norm Calculation</li>
+            <li><i class="fas fa-check-circle icon"></i>Eigenvalue Computation (Placeholder)</li>
+            <li><i class="fas fa-check-circle icon"></i>Identity Matrix Creation</li>
         </ul>
         
-        <h2>Installation</h2>
-        <h3>Linux</h3>
+        <h2><i class="fas fa-download icon"></i>Installation</h2>
+        <h3><i class="fab fa-linux icon"></i>Linux</h3>
         <ol>
-            <li><strong>Clone the Repository</strong>
+            <li><strong><i class="fas fa-code-branch icon"></i>Clone the Repository</strong>
                 <div class="code-container"><pre><code>git clone https://github.com/rubikproxy/matrix.h
 cd matrix.h</code></pre></div>
             </li>
-            <li><strong>Build and Install the Library</strong>
+            <li><strong><i class="fas fa-tools icon"></i>Build and Install the Library</strong>
                 <div class="code-container"><pre><code>chmod +x install_matrix_lib.sh
 ./install_matrix_lib.sh</code></pre></div>
                 <p>This script will:</p>
                 <ul>
-                    <li>Clean up previous builds</li>
-                    <li>Compile the source code</li>
-                    <li>Create a static library</li>
-                    <li>Install the library and header files</li>
-                    <li>Update the library cache</li>
+                    <li><i class="fas fa-broom icon"></i>Clean up previous builds</li>
+                    <li><i class="fas fa-cogs icon"></i>Compile the source code</li>
+                    <li><i class="fas fa-file-archive icon"></i>Create a static library</li>
+                    <li><i class="fas fa-file-import icon"></i>Install the library and header files</li>
+                    <li><i class="fas fa-sync icon"></i>Update the library cache</li>
                 </ul>
             </li>
-            <li><strong>Verify the Installation</strong>
+            <li><strong><i class="fas fa-check icon"></i>Verify the Installation</strong>
                 <div class="code-container"><pre><code>ls /usr/local/lib/libmatrix.a
 ls /usr/local/include/matrix.h</code></pre></div>
             </li>
         </ol>
 
-        <h3>macOS</h3>
+        <h3><i class="fab fa-apple icon"></i>macOS</h3>
         <ol>
-            <li><strong>Clone the Repository</strong>
+            <li><strong><i class="fas fa-code-branch icon"></i>Clone the Repository</strong>
                 <div class="code-container"><pre><code>git clone https://github.com/rubikproxy/matrix.h
 cd matrix.h</code></pre></div>
             </li>
-            <li><strong>Build the Library</strong>
+            <li><strong><i class="fas fa-tools icon"></i>Build the Library</strong>
                 <div class="code-container"><pre><code>make</code></pre></div>
             </li>
-            <li><strong>Install the Library</strong>
+            <li><strong><i class="fas fa-file-import icon"></i>Install the Library</strong>
                 <div class="code-container"><pre><code>sudo cp libmatrix.a /usr/local/lib/
 sudo cp include/matrix.h /usr/local/include/
 sudo ranlib /usr/local/lib/libmatrix.a</code></pre></div>
             </li>
-            <li><strong>Verify the Installation</strong>
+            <li><strong><i class="fas fa-check icon"></i>Verify the Installation</strong>
                 <div class="code-container"><pre><code>ls /usr/local/lib/libmatrix.a
 ls /usr/local/include/matrix.h</code></pre></div>
             </li>
         </ol>
 
-        <h3>Windows</h3>
+        <h3><i class="fab fa-windows icon"></i>Windows</h3>
         <ol>
-            <li><strong>Clone the Repository</strong>
+            <li><strong><i class="fas fa-code-branch icon"></i>Clone the Repository</strong>
                 <div class="code-container"><pre><code>git clone https://github.com/rubikproxy/matrix.h
 cd matrix.h</code></pre></div>
             </li>
-            <li><strong>Build the Library</strong>
+            <li><strong><i class="fas fa-tools icon"></i>Build the Library</strong>
                 <div class="code-container"><pre><code>gcc -Iinclude -Wall -Wextra -c src/matrix.c -o src/matrix.o
 ar rcs libmatrix.a src/matrix.o</code></pre></div>
             </li>
-            <li><strong>Install the Library</strong>
+            <li><strong><i class="fas fa-file-import icon"></i>Install the Library</strong>
                 <div class="code-container"><pre><code>mkdir "C:\Program Files\MatrixLib"
 copy libmatrix.a "C:\Program Files\MatrixLib"
 copy include\matrix.h "C:\Program Files\MatrixLib"</code></pre></div>
             </li>
-            <li><strong>Set Environment Variables</strong>
+            <li><strong><i class="fas fa-sliders-h icon"></i>Set Environment Variables</strong>
                 <div class="code-container"><pre><code>setx LIBRARY_PATH "C:\Program Files\MatrixLib"</code></pre></div>
             </li>
-            <li><strong>Verify the Installation</strong>
+            <li><strong><i class="fas fa-check icon"></i>Verify the Installation</strong>
                 <div class="code-container"><pre><code>dir "C:\Program Files\MatrixLib"</code></pre></div>
             </li>
         </ol>
 
-        <h2>Usage</h2>
-        <h3>Example Code</h3>
+        <h2><i class="fas fa-code icon"></i>Usage</h2>
+        <h3><i class="fas fa-file-code icon"></i>Example Code</h3>
         <p>Here’s an example demonstrating how to use the library:</p>
         <ol>
-            <li><strong>Create a Source File</strong>
+            <li><strong><i class="fas fa-edit icon"></i>Create a Source File</strong>
                 <div class="code-container"><pre><code>#include <stdio.h>
 #include <matrix.h>
 
@@ -174,72 +178,52 @@ int main() {
     Matrix *b = create_matrix(2, 2);
 
     // Initialize matrices
-    a->data[0] = 1; a->data[1] = 2;
-    a->data[2] = 3; a->data[3] = 4;
+    set_matrix_element(a, 0, 0, 1);
+    set_matrix_element(a, 0, 1, 2);
+    set_matrix_element(a, 1, 0, 3);
+    set_matrix_element(a, 1, 1, 4);
 
-    b->data[0] = 5; b->data[1] = 6;
-    b->data[2] = 7; b->data[3] = 8;
+    set_matrix_element(b, 0, 0, 5);
+    set_matrix_element(b, 0, 1, 6);
+    set_matrix_element(b, 1, 0, 7);
+    set_matrix_element(b, 1, 1, 8);
 
-    // Matrix addition
-    Matrix *result_add = matrix_add(a, b);
-    printf("Matrix Addition:\\n");
-    print_matrix(result_add);
+    // Add matrices
+    Matrix *c = add_matrices(a, b);
 
-    // Matrix multiplication
-    Matrix *result_mul = matrix_mul(a, b);
-    printf("Matrix Multiplication:\\n");
-    print_matrix(result_mul);
+    // Print result
+    print_matrix(c);
 
-    // Clean up
+    // Deallocate matrices
     free_matrix(a);
     free_matrix(b);
-    free_matrix(result_add);
-    free_matrix(result_mul);
+    free_matrix(c);
 
     return 0;
 }</code></pre></div>
             </li>
-            <li><strong>Compile the Example</strong>
-                <ul>
-                    <li><strong>Linux/macOS</strong>:
-                        <div class="code-container"><pre><code>gcc main.c -L/usr/local/lib -lmatrix -o main -lm</code></pre></div>
-                    </li>
-                    <li><strong>Windows</strong>:
-                        <div class="code-container"><pre><code>gcc main.c -o main -L"C:\Program Files\MatrixLib" -lmatrix</code></pre></div>
-                    </li>
-                </ul>
-            </li>
-            <li><strong>Run the Example</strong>
-                <ul>
-                    <li><strong>Linux/macOS</strong>:
-                        <div class="code-container"><pre><code>./main</code></pre></div>
-                    </li>
-                    <li><strong>Windows</strong>:
-                        <div class="code-container"><pre><code>main.exe</code></pre></div>
-                    </li>
-                </ul>
+            <li><strong><i class="fas fa-rocket icon"></i>Compile and Run</strong>
+                <div class="code-container"><pre><code>gcc -o matrix_example matrix_example.c -L/usr/local/lib -lmatrix
+./matrix_example</code></pre></div>
             </li>
         </ol>
 
-        <h2>Contributing</h2>
+        <h3><i class="fas fa-cogs icon"></i>Function Reference</h3>
+        <p>Detailed documentation for each function is provided in the <code>matrix.h</code> header file.</p>
+
+        <h2><i class="fas fa-hand-holding-heart icon"></i>Contributing</h2>
         <div class="contribute-section">
-            <h3>How to Contribute</h3>
-            <p>We welcome contributions to the Matrix Library project. Here are some ways you can contribute:</p>
-            <ul>
-                <li>Report bugs and issues</li>
-                <li>Submit feature requests</li>
-                <li>Review and update documentation</li>
-                <li>Submit pull requests for bug fixes and new features</li>
-            </ul>
-            <p>For detailed guidelines on how to contribute, please refer to our <a href="https://github.com/rubikproxy/matrix.h/blob/main/CONTRIBUTING.md">Contribution Guidelines</a>.</p>
+            <h3><i class="fas fa-code-branch icon"></i>How to Contribute</h3>
+            <p>We welcome contributions! You can help by submitting issues, improving documentation, or adding new features. Please follow our contribution guidelines in the repository.</p>
+            <p><a href="https://github.com/rubikproxy/matrix.h/blob/main/CONTRIBUTING.md" target="_blank">Contribution Guidelines</a></p>
         </div>
 
-        <h2>Support Us</h2>
+        <h2><i class="fas fa-handshake icon"></i>Sponsorship</h2>
         <div class="sponsor-section">
-            <h3>Become a Sponsor</h3>
-            <p>If you find this library useful and would like to support its development, consider sponsoring us on <a href="https://github.com/sponsors/rubikproxy">GitHub Sponsors</a>. Your support helps us maintain and improve the library.</p>
+            <h3><i class="fas fa-dollar-sign icon"></i>Support This Project</h3>
+            <p>If you find this library useful, please consider sponsoring us to support ongoing development and maintenance.</p>
+            <p><a href="https://github.com/sponsors/rubikproxy" target="_blank">Sponsor Us</a></p>
         </div>
     </div>
 </body>
-                          </html>
-                          
+</html>
