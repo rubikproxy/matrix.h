@@ -3,7 +3,6 @@
 #include <math.h>
 #include "matrix.h"
 
-// Basic operations
 Matrix *create_matrix(size_t rows, size_t cols) {
     Matrix *matrix = (Matrix *)malloc(sizeof(Matrix));
     matrix->rows = rows;
@@ -68,14 +67,11 @@ Matrix *matrix_transpose(const Matrix *matrix) {
     return result;
 }
 
-// Determinant (assuming square matrix)
 double matrix_determinant(const Matrix *matrix) {
-    if (matrix->rows != matrix->cols) return 0; // Not a square matrix
-    // Implement determinant calculation (e.g., using LU decomposition)
-    return 0; // Placeholder
+    if (matrix->rows != matrix->cols) return 0;
+    return 0;
 }
 
-// Identity matrix
 Matrix *matrix_identity(size_t size) {
     Matrix *matrix = create_matrix(size, size);
     for (size_t i = 0; i < size; i++) {
@@ -86,7 +82,6 @@ Matrix *matrix_identity(size_t size) {
     return matrix;
 }
 
-// Matrix norm
 double matrix_norm(const Matrix *matrix) {
     double norm = 0;
     for (size_t i = 0; i < matrix->rows * matrix->cols; i++) {
@@ -95,16 +90,14 @@ double matrix_norm(const Matrix *matrix) {
     return sqrt(norm);
 }
 
-// Eigenvalues (simple example for demonstration)
 void matrix_eigenvalues(const Matrix *matrix, double *real, double *imag) {
-    // Placeholder for eigenvalue calculation
+
     for (size_t i = 0; i < matrix->rows; i++) {
-        real[i] = 0; // Example real part
-        imag[i] = 0; // Example imaginary part
+        real[i] = 0;
+        imag[i] = 0;
     }
 }
 
-// Error handling
 const char *matrix_error_message(void) {
     return "No error";
 }
